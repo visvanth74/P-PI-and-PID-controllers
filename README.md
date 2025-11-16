@@ -55,39 +55,39 @@ Kt=0.024 J=3.2284e-6 B=3.5077e-6 Rf=4 Lf=2.75e-6 s=tf('s') ol_sys=Kt/((Jss+Bs)(R
 step(ol_sys) title('open loop response') cl_sys=feedback(ol_sys,1) subplot(2,1,2) step(cl_sys) title('closed loop
 response')
 ### Without Controller (Open loop System)
-num=[1]
-den=[1 10 20]
-sys=tf(num,den)
-subplot(2,2,1)
-step(sys)
-title('open loop system')
+num=[1] <br>
+den=[1 10 20] <br>
+sys=tf(num,den) <br>
+subplot(2,2,1) <br>
+step(sys) <br>
+title('open loop system') <br>
 
 ### With P-Controller
-Kp=300;
-c1=pid(Kp)
-G1=feedback(c1*sys,1)
-subplot(2,2,2)
-step(G1)
-title('P-CONTROLLER')
+Kp=300; <br>
+c1=pid(Kp) <br>
+G1=feedback(c1*sys,1) <br>
+subplot(2,2,2) <br>
+step(G1) <br>
+title('P-CONTROLLER') <br>
 
 ### With PI Controller
-Kp=30;
-Ki=70;
-c2=pid(Kp,Ki)
-G2=feedback(c2*sys,1)
-subplot(2,2,3)
-step(G2)
-title('Pi-CONTROLLER')
+Kp=30; <br>
+Ki=70; <br>
+c2=pid(Kp,Ki) <br>
+G2=feedback(c2*sys,1) <br>
+subplot(2,2,3) <br>
+step(G2) <br>
+title('Pi-CONTROLLER') <br>
 
 ### With PID Controller
-Kp=350;
-Ki=300;
-Kd=50;
-c3=pid(Kp,Ki,Kd)
-G3=feedback(c3*sys,1)
-subplot(2,2,4)
-step(G3)
-title('Pid-CONTROLLER')
+Kp=350; <br>
+Ki=300; <br>
+Kd=50; <br>
+c3=pid(Kp,Ki,Kd) <br>
+G3=feedback(c3*sys,1) <br>
+subplot(2,2,4) <br>
+step(G3) <br>
+title('Pid-CONTROLLER') <br>
 
 ## Output: 
 ### Without Controller (Open loop System)
