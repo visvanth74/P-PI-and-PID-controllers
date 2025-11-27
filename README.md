@@ -51,9 +51,6 @@ The addition of an integral term to the controller ( ) tends to help reduce stea
 	Save and Execute the program.
 	Determine the steady state error and analyse the controllers.
 ## Program: 
-Kt=0.024 J=3.2284e-6 B=3.5077e-6 Rf=4 Lf=2.75e-6 s=tf('s') ol_sys=Kt/((Jss+Bs)(Rf+Lf*s)) subplot(2,1,1)
-step(ol_sys) title('open loop response') cl_sys=feedback(ol_sys,1) subplot(2,1,2) step(cl_sys) title('closed loop
-response')
 ### Without Controller (Open loop System)
 num=[1] <br>
 den=[1 10 20] <br>
